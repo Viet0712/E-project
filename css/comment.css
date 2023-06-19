@@ -26,24 +26,24 @@
 }
 
 #comment_content {
-    width: 90%;
+    width: 50%;
     height: auto;
     min-height: 20vw;
     max-height: 20vw;
-    margin-left: 5%;
+    margin-left: 25%;
     overflow: auto;
     background-color: rgb(255, 255, 255);
 }
 
 #cmt {
-    width: 90%;
+    width: 50%;
     height: 5vw;
-    margin-left: 5%;
+    margin-left: 25%;
 }
 
 .btn-comment {
     margin-top: 1vw;
-    margin-left: 80%;
+    margin-left: 67.8%;
     width: fit-content;
     padding: 0.5vw 2vw;
     background-color: aliceblue;

@@ -103,6 +103,7 @@ window.addEventListener('load', () => {
     if (x == 'Libra') {
         b = 49
     }
+
     const loop = () => {
         example.run();
         count++;

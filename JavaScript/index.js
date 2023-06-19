@@ -1,4 +1,4 @@
-// effect menu
+//menu bar effect
 window.addEventListener("scroll", function () {
     var menuWeb = document.getElementById('menuWeb');
     var scrolled = window.pageYOffset || document.documentElement.scrollTop;
@@ -14,11 +14,11 @@ window.addEventListener("scroll", function () {
     this.previousScroll = window.pageYOffset;
 });
 // end
-//hieu ung transition trang home phần main-content-index
+//index page motion effect
 var mainSections = document.querySelectorAll('.main-content-index');
 var img = document.querySelectorAll('.img-boxmain-index');
 var content = document.querySelectorAll('.content-boxmain_1-index');
-
+// start responsive function showing when screen is resized
 window.addEventListener('resize', function () {
     var windowHeight = window.innerHeight;
     if (windowHeight > 9 / 16 * window.innerWidth) {
@@ -67,7 +67,9 @@ window.addEventListener('load', function () {
 
     }
 })
+// end responsive function showing when screen is resized
 
+//start index page movement event
 window.addEventListener('scroll', function () {
     var scrollPosition = window.scrollY || window.pageYOffset;
     var windowHeight = window.innerHeight;
@@ -131,9 +133,8 @@ window.addEventListener('scroll', function () {
     }
 
 });
+//end index page movement event
 
-
-//su kien load cho phan dau trang home
 window.addEventListener('load', function () {
     var prap1 = document.querySelector('.content-index-top');
     var prap2 = document.querySelector('.content-index-bottom');
@@ -163,7 +164,6 @@ function getValue(a) {
 
 
 
-//script chung cho tat ca cac page
 window.addEventListener('load', function () {
 
     for (i = 0; i <= localStorage.length; i++) {
@@ -185,7 +185,7 @@ window.addEventListener('load', function () {
         indexlog.innerHTML = "Sign In" + '<i class="fa-solid fa-user"></i>'
     }
 });
-//----------------------------------
+////responsive menu bar
 function toggleContactList() {
     var contactList = document.getElementById("listcontact");
     contactList.classList.toggle("show");

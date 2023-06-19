@@ -16,6 +16,7 @@ window.addEventListener("scroll", function () {
     this.previousScroll = window.pageYOffset;
 });
 // end
+//start check account existence
 function checkaccount() {
     let email = document.getElementById("email").value;
     let pass3 = document.getElementById("password").value;
@@ -41,6 +42,7 @@ function checkaccount() {
     alert("Email account does not exist");
     return false;
 }
+//end check account existence
 //event acccount login
 window.addEventListener('load', function () {
     let boxsignin = document.getElementById("box-signin")
@@ -96,22 +98,3 @@ if (typeof document.getElementsByTagName("input")[0].autocomplete !== "undefined
 if (typeof document.getElementsByTagName("input")[1].autocomplete !== "undefined") {
     document.getElementsByTagName("input")[1].autocomplete = "new-password";
 }
-
-// window.addEventListener('load', function () {
-//     var prap1 = document.querySelector('.signin-label-email')
-//     var prap2 = document.querySelector('.signin-label-password')
-//     var prap3 = document.getElementById('email').value
-//     var prap4 = document.getElementById('password').value
-//     if (prap3 != "" || prap3 != " " || prap3 == null) {
-//         prap1.style.top = "-25px"
-//     }
-//     if (prap4 != "" || prap4 != " " || prap4 == null) {
-//         prap2.style.top = "-25px"
-//     }
-//     else {
-//         prap1.style.top = "0"
-//         prap2.style.top = "0"
-//     }
-
-
-// });

@@ -1,4 +1,4 @@
-
+//function comment
 let seclocal = localStorage.getItem("signin")
 sessionStorage.setItem("signin", seclocal)
 let userlocal = localStorage.getItem("comment")
@@ -32,6 +32,7 @@ function addComment() {
         return false
     }
 }
+//menu bar effect
 window.addEventListener("scroll", function () {
     var menuWeb = document.getElementById('menuWeb');
     var scrolled = window.pageYOffset || document.documentElement.scrollTop;
@@ -55,9 +56,9 @@ $(document).ready(function () {
     $.getJSON("infor.json", function (items) {
         data = items;
 
-        showImage(data);
+        showcontent(data);
     });
-    function showImage(items) {
+    function showcontent(items) {
         let s = [];
         var json = [];
         var x = localStorage.getItem("comet");

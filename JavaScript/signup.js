@@ -59,7 +59,7 @@ document.getElementById("phone").oninput = function () {
 
 
 
-// Display step 0 (form-signin-step1)
+// Display step 0 (form-signup-step1)
 document.addEventListener('DOMContentLoaded', function () {
     showStep(0);
 });
@@ -78,7 +78,22 @@ backButton.addEventListener('click', function () {
         showStep(currentStep - 1);
     }
 });
+// event Button Next
+nextButton.addEventListener('click', function () {
+    var currentStep = getCurrentStep();
+    var isValid = false;
 
+    if (currentStep === 0) {
+        isValid = checkFormStep1();
+    } else if (currentStep === 1) {
+        isValid = checkFormStep2();
+    } else if (currentStep === 2) {
+        isValid = checkFormStep3();
+    }
+    if (currentStep < formSignins.length - 1 && isValid) {
+        showStep(currentStep + 1);
+    }
+});
 
 // function get current step
 function getCurrentStep() {
@@ -218,7 +233,7 @@ username.addEventListener('input', function () {
         return true
     }
 })
-
+//event check password confirm
 var passwordconfirmvalid = false;
 passwordconfirm.addEventListener('input', function () {
     var errorpasswordconfirm = document.getElementById("passwordconfirmerror")
@@ -246,18 +261,6 @@ passwordconfirm.addEventListener('input', function () {
         return true
     }
 });
-
-
-// function check form-signin step 1
-function checkFormStep1() {
-    if (usernamevalid && emailvalid && passwordvalid && passwordconfirmvalid) {
-        return true;
-    } else {
-        alert("Please enter complete information !")
-        return false;
-    }
-}
-
 //step2
 var country = document.getElementById("country");
 var address = document.getElementById("address");
@@ -310,7 +313,17 @@ phone.addEventListener('input', function () {
         phonevalid = true;
     }
 });
-// function check form-signin step 2
+
+// function check form-signup step 1
+function checkFormStep1() {
+    if (usernamevalid && emailvalid && passwordvalid && passwordconfirmvalid) {
+        return true;
+    } else {
+        alert("Please enter complete information !")
+        return false;
+    }
+}
+// function check form-signup step 2
 function checkFormStep2() {
     if (addressvalid && datevalid && phonevalid && countryvalid) {
         return true;
@@ -320,7 +333,7 @@ function checkFormStep2() {
     }
 }
 
-// // function check form-signin step 3
+// // function check form-signup step 3
 function checkFormStep3() {
     var termsAccepted = document.querySelector('.form-signup-step3 input[type="checkbox"]').checked;
     if (!termsAccepted) {
@@ -342,21 +355,3 @@ function checkFormStep3() {
     }
 
 }
-
-
-// event Button Next
-nextButton.addEventListener('click', function () {
-    var currentStep = getCurrentStep();
-    var isValid = false;
-
-    if (currentStep === 0) {
-        isValid = checkFormStep1();
-    } else if (currentStep === 1) {
-        isValid = checkFormStep2();
-    } else if (currentStep === 2) {
-        isValid = checkFormStep3();
-    }
-    if (currentStep < formSignins.length - 1 && isValid) {
-        showStep(currentStep + 1);
-    }
-});

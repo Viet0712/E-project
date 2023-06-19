@@ -38,6 +38,9 @@ app.filter("search", function () {
         }
     };
 });
+
+
+
 app.run(function ($rootScope, $http) {
     $rootScope.list = [];
     $rootScope.search_list = [];
@@ -125,6 +128,7 @@ app.controller("ctr1", function ($scope, $rootScope, $timeout, $filter) {
             $scope.pagenumber = $rootScope.currentPage = 0;
         }
     }
+
     $scope.handleClick = function (event, infor) {
         if (event.which === 3) {
             localStorage.setItem('news', infor.name);

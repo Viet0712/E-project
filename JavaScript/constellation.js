@@ -1,5 +1,5 @@
 
-
+//function comment
 let seclocal = localStorage.getItem("signin")
 sessionStorage.setItem("signin", seclocal)
 let userlocal = localStorage.getItem("comment")
@@ -33,7 +33,7 @@ function addComment() {
         return false
     }
 }
-// effect menu
+//menu bar effect
 window.addEventListener("scroll", function () {
     var menuWeb = document.getElementById('menuWeb');
     var scrolled = window.pageYOffset || document.documentElement.scrollTop;

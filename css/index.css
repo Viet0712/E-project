@@ -180,6 +180,10 @@ nav {
     transition: 1s;
 }
 
+.menu-web-index {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 .menu-web.scrolled {
     background-color: rgba(0, 0, 0, 0.7);
 }
@@ -1183,10 +1187,13 @@ nav {
 }
 
 .info_client_element_title {
+    display: inline-block;
     color: rgb(255, 254, 254);
     font-size: 1.8vw;
     margin-left: 4vw;
     text-align: left;
+    width: 12vw;
+
 }
 
 
@@ -1195,8 +1202,8 @@ nav {
     color: rgb(220, 0, 0);
     margin-bottom: 0.6vh;
     font-size: 1.6vw;
-    margin-right: 2vw;
-    margin-left: 3vh;
+    margin-right: 1vw;
+    margin-left: 2vh;
     text-align: left;
 }
 
@@ -1740,6 +1747,10 @@ textarea {
         z-index: 1;
         transition: 1s;
         height: 5vh;
+    }
+
+    .footer-right {
+        display: none;
     }
 
     .menu-web.scrolled {

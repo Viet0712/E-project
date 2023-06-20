@@ -1,7 +1,7 @@
 # E-project
 
-<h2>eProject1
-<h2>T1.2302.E1 - eProject - Group 6
+<h2>eProject1</h2>
+<h2>T1.2302.E1 - eProject - Group 6</h2>
 Batch no.: T1.2302.E1
 
 CENTER NAME: ACE-HCMC-2-FPT
